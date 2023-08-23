@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+body{
+    color: #eee;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+:root{
+
+    --theme-accent-base: #940d0d;
+    --theme-accent-light: #e03131;
+    --theme-accent-dark: #520707;
+
+    --navbar-bg: #252525;
+    --navbar-links: #fff;
+    --navbar-links-hover: var(--theme-accent-light);
+    --navbar-t2-bg: var(--theme-accent-base);
+
+    --about-bg: #2b0b0b;
+    --about-heading: #e6ab0a;
+
+    --features-bg: #580b0b;
+    --feature-card-border: #971d1d;
+    --feature-card-header: #e79e01;
+    --feature-card-background: #421212;
+    --feature-container-scroll-bg: #2e0606;
+    --feature-container-scroll-thumb: #b45757;
+
+    --tokenomics-bg: #f7f7f7;
+    --tokenomics-header: #181818;
+    --tokenomics-numbers: #f59403;
+    --tokenomics-card-bg:#3f0b0b;
+    --tokenomics-hr: #000;
+
+    --roadmap-bg:#2b0b0b;
+    --roadmap-phase-bg:#4b0c0c;
+    --roadmap-phase-active-bg:#911c1c;
+    --roadmap-phase-active-border:#d3a1a1;
+
+    --how-to-buy-bg: #2b0b0b;
+    --how-to-buy-step-bg: #421212;
+    --how-to-buy-step-border: #6b3939;
+}
+
+.tg-button{
+    text-decoration: none;
+    background-color: #19688d;
+    border: 2px solid #1084b3;
+    color: #eee;
+    padding: 10px 20px;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+}
+.tg-button:hover{
+    transform: translateY(-2px);
+    color: #74c3e7;
+}
+.twitter-button{
+    text-decoration: none;
+    background-color: #2c9de9;
+    border: 2px solid #1084b3;
+    color: #eee;
+    padding: 10px 20px;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+}
+.twitter-button:hover{
+    transform: translateY(-2px);
+    color: #74c3e7;
+}
+.plain-button{
+    text-decoration: none;
+    background-color: #222222;
+    border: 2px solid #4e4e4e;
+    color: #eee;
+    padding: 10px 20px;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+}
+.plain-button:hover{
+    transform: translateY(-3px);
+    color: #585858;
+}
+
+header{
+    background-image: linear-gradient(90deg,#0000001a,#000),url('../images/bg-header.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+#navigation.t1{
+    background-color: transparent;
+}
+#navigation.t1 a{
+    color: #fff;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in-out;
+}
+#navigation.t1 a:hover{
+    transform: translateY(-2px);
+    color: var(--navbar-links-hover);
+}
+
+#navigation.t2{
+    background-color: transparent;
+}
+#navigation.t2 .links{
+    background-color: var(--navbar-t2-bg);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+#navigation.t2 a{
+    color: var(--navbar-links);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+#navigation.t2 a:hover{
+    transform: translateY(-2px);
+}
+
+#hero.t1 img{
+    width: 40%;
+    animation: heroUpDown infinite 2s alternate-reverse;
+}
+#hero.t1 h1{
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+#hero.t2 img{
+    width: 40%;
+    animation: heroLeftRight infinite 2s alternate-reverse;
+}
+#hero.t2 h1{
+    font-weight: bold;
+    font-size: 4rem;
+}
+#hero.t2 .contract-address{
+    background-color: var(--feature-card-header);
+    border-radius: 2px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #f3b04c;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+#hero.t2 .contract-address:hover{
+    transform: scale(1.03)
+}
+
+
+#partners.t1{
+    overflow-x: scroll;
+}
+#partners.t1::-webkit-scrollbar-thumb{
+    background-color: #0d6e94;
+}
+#partners.t1::-webkit-scrollbar{
+    height: 3px;
+    background-color: #e2e2e2;
+}
+
+
+#about.t1{
+    background-color: var(--about-bg);
+}
+#about.t1 h1{
+    font-weight: bold;
+}
+#about p{
+    line-height: 2.2rem;
+    font-size: 1.2rem;
+}
+#about.t1 img{
+    width: 450px;
+}
+
+#about.t2{
+    background-color: var(--about-bg);
+}
+#about.t2 h1{
+    font-weight: bold;
+}
+#about.t2 h6{
+    color: var(--about-heading);
+    font-weight: bold;
+}
+
+#features.t1,#features.t2{
+    background-color: var(--features-bg);
+}
+#features.t1 h1 ,#features.t2 h1,
+#features.t3 h1{
+    font-weight: bold;
+}
+#features.t1 .feature-card{
+    background-color: var(--feature-card-background);
+    border: 2px solid var(--feature-card-border);
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+#features.t1 .feature-card:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+}
+#features.t1 .feature-card h3{
+    color: var(--feature-card-header);
+}
+
+#features.t2 .feature-container-main{
+    position: relative;
+}
+#features.t2 .overlay{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.062) 15%, rgba(0, 0, 0, 0.055) 85%, rgba(0, 0, 0, 0.596) 100%);
+    z-index: 2;
+    pointer-events: none;
+    position: absolute;
+}
+#features.t2 .feature-container {
+    overflow-x: scroll;
+    cursor:move;
+    transform: scale(0.98);
+}
+#features.t2 .feature-container::-webkit-scrollbar {
+    background-color: var(--feature-container-scroll-bg);
+    height: 0px; 
+    /* if you wanna enable scroll use this */
+}
+#features.t2 .feature-container::-webkit-scrollbar-thumb{
+   background-color: var(--feature-container-scroll-thumb);
+}
+#features.t2 .feature-container.active{
+    cursor: grabbing;
+    transform: scale(1);
+}
+#features.t2 .feature-card{
+    background-color: var(--feature-card-background);
+    border: 2px solid var(--feature-card-border);
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    min-width: 350px;
+}
+
+
+#features.t3{
+    background-color: var(--features-bg);
+}
+#features.t3 .feature-container{
+    background-color: var(--feature-card-background);
+    border-radius: 20px;
+}
+#features.t3 .feature-card img{
+    background-color: var(--feature-container-scroll-bg);
+    border-radius: 500px;
+    /* clip-path: polygon(50% 0%, 90% 20%, 100% 62%, 75% 100%, 25% 100%, 0% 62%, 10% 20%); */
+    border-radius: 42% 58% 20% 80% / 67% 28% 72% 33%; 
+    transition: all 0.5s ease-in-out;
+}
+#features.t3 .feature-card img:hover{
+    transform: rotateZ(5deg);
+}
+#features.t3 .feature-card{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.1rem;
+}
+
+
+#tokenomics.t1,#tokenomics.t2 {
+    background-color: var(--tokenomics-bg);
+}
+#tokenomics.t1 h6,#tokenomics.t2 h6{
+    color: var(--tokenomics-header);
+}
+#tokenomics.t1 h1,#tokenomics.t2 h1{
+    color: var(--tokenomics-numbers);
+    font-weight: bold;
+}
+
+#tokenomics.t2 hr{
+    background-color: var(--tokenomics-hr);
+    height: 3px;
+    border-radius: 30px;
+    margin: 5px 0px;
+}
+#tokenomics.t2 .col-md-5{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--tokenomics-card-bg);
+    margin: 10px 0px;
+    transition: all 0.2s ease-in-out;
+}
+#tokenomics.t2 .col-md-5:hover{
+    transform: translateY(-3px);
+}
+#tokenomics.t2 img{
+    animation: heroRotatingCounterClockwise 3s infinite alternate-reverse;
+}
+
+#roadmap.t1{
+    background-color: var(--roadmap-bg);
+}
+#roadmap.t1 .phase{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--roadmap-phase-bg);
+    transition: all 0.3s ease-in-out;
+}
+#roadmap.t1 .phase:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+#roadmap.t1 .phase.active{
+    background-color: var(--roadmap-phase-active-bg);
+    border: 2px solid var(--roadmap-phase-active-border);
+}
+
+
+#how-to-buy.t1{
+    background-color: var(--how-to-buy-bg);
+}
+#how-to-buy.t1 h1{
+    font-weight: bold;
+}
+#how-to-buy.t1 .step{
+    background-color: var(--how-to-buy-step-bg);
+    border: 2px solid var(--how-to-buy-step-border);
+    padding: 10px;
+    margin: 3px 0px;
+    border-radius: 10px;
+}
+#how-to-buy.t1 h5{
+    color: var(--about-heading);
+}
+#how-to-buy.t1 h3{
+    font-weight: bold;
+}
+
+
+#footer{
+    background-color: #500404;
+}
+#footer a{
+    color: #fff;
+    font-size: 1.2rem;
+}
+#footer h5,h2{
+    color: var(--about-heading);
+}
+@media (max-width: 535px) {
+    #navigation.t1 img{
+        width: 80%;
+    }
+    #hero.t1 img{
+        width: 100%;
+    }
+    #hero.t1 h1{
+        font-size: 2rem;
+    }
+    #hero.t2 img{
+        width: 100%;
+    }
+    #hero.t2 h1{
+        font-size: 2rem;
+    }
+    .tg-button,.twitter-button,.plain-button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #about.t1 img{
+        width: 100%;
+    }
+
+}
+
+@keyframes heroUpDown {
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(-8px);}
+    100%{transform: translateY(0px);}
+}
+@keyframes heroLeftRight {
+    0%{transform: translateX(0px);}
+    50%{transform: translateX(-8px);}
+    100%{transform: translateX(0px);}
+}
+@keyframes heroRotatingClockwise {
+    0%{transform: rotateZ(0deg);}
+    50%{transform: rotateZ(5deg);}
+    100%{transform: rotateZ(0deg);}
+}
+@keyframes heroRotatingCounterClockwise {
+    0%{transform: rotateZ(0deg);}
+    50%{transform: rotateZ(-5deg);}
+    100%{transform: rotateZ(0deg);}
+}
